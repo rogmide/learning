@@ -6,6 +6,8 @@ class Invoice
 {
 
     protected array $data = [];
+    protected int $id = 1;
+    protected string $accountNumber = '1234567890';
 
     public float $amount;
 
@@ -54,5 +56,13 @@ class Invoice
     public function __toString()
     {
         return 'Hello';
+    }
+
+    public function __debugInfo()
+    {
+        return [
+            'id' => $this->id,
+            'accountNumber' => '****' . substr($this->accountNumber, -4),
+        ];
     }
 }

@@ -7,6 +7,8 @@ $invoice = new App\Invoice();
 
 $invoice->amount = 20;
 
-var_dump($invoice->process(1, 2, 3, 4));
+// var_dump($invoice->process(1, 2, 3, 4));
 echo '<br />';
-var_dump($invoice->__toString());
+// var_dump($invoice->__toString());
+
+var_dump($invoice);
