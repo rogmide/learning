@@ -24,3 +24,16 @@ require __DIR__ . '/../../vendor/autoload.php';
 // var_dump($classb->make());
 // echo '<br />';
 // var_dump($classA->make());
+
+$coffeeMaker = new \App\CoffeMakers\CoffeeMaker();
+$coffeeMaker->makeCoffee();
+
+echo '<br />';
+
+$latteMaker = new \App\CoffeMakers\LatteMaker;
+$latteMaker->makeLatte();
+
+echo '<br />';
+
+$capuccinoMaker = new \App\CoffeMakers\cappuccinoMaker();
+$capuccinoMaker->makeCappuccino();
