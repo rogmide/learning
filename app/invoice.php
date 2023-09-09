@@ -33,4 +33,26 @@ class Invoice
         var_dump('unset');
         unset($this->data[$name]);
     }
+
+    protected function process($amount, $description)
+    {
+        var_dump($amount, $description);
+    }
+
+    public function __call($name, $arguments)
+    {
+        if (method_exists($this, $name)) {
+            call_user_func_array([$this, $name], $arguments);
+        }
+    }
+
+    public static function __callStatic($name, $arguments)
+    {
+        var_dump('static', $name, $arguments);
+    }
+
+    public function __toString()
+    {
+        return 'Hello';
+    }
 }
