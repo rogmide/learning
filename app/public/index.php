@@ -2,9 +2,9 @@
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-$arr = [
-    'name' => 'Roger',
-    'host' => 'Home'
-];
+// If the property not exist the getter and setter will be call
+$invoice = new App\Invoice();
 
-var_dump($arr);
+$invoice->amount = 20;
+
+var_dump($invoice);
