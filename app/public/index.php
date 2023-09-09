@@ -37,3 +37,11 @@ echo '<br />';
 
 $capuccinoMaker = new \App\CoffeMakers\cappuccinoMaker();
 $capuccinoMaker->makeCappuccino();
+
+
+echo '<br />';
+
+$allinonecoffeemaker = new \App\CoffeMakers\AllInOneCoffeeMaker();
+$allinonecoffeemaker->makeCoffee();
+$allinonecoffeemaker->makeLatte();
+$allinonecoffeemaker->makeCappuccino();
