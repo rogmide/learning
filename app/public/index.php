@@ -1,5 +1,6 @@
 <?php
 
+use App\ClassA;
 use App\CoffeMakers\LatteMaker;
 
 require __DIR__ . '/../../vendor/autoload.php';
@@ -53,7 +54,21 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 // $latteMaker->Foo();
 
-\App\CoffeMakers\LatteMaker::$foo = 'foo';
-\App\CoffeMakers\AllInOneCoffeeMaker::$foo = 'bar';
+// \App\CoffeMakers\LatteMaker::$foo = 'foo';
+// \App\CoffeMakers\AllInOneCoffeeMaker::$foo = 'bar';
 
-echo \App\CoffeMakers\LatteMaker::$foo . ' ' . \App\CoffeMakers\AllInOneCoffeeMaker::$foo;
+// echo \App\CoffeMakers\LatteMaker::$foo . ' ' . \App\CoffeMakers\AllInOneCoffeeMaker::$foo;
+
+
+// $obj = new class(1, 2, 3)
+// {
+//     public function __construct($x, $y, $z)
+//     {
+//     }
+// };
+
+// var_dump($obj);
+
+$obj = new ClassA(1, 2);
+
+var_dump($obj->bar());
