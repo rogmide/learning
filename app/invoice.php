@@ -6,7 +6,7 @@ class Invoice
 {
 
     protected array $data = [];
-    protected int $id = 1;
+    protected string $id = 'asdsd';
     protected string $accountNumber = '1234567890';
 
     public float $amount;
@@ -19,6 +19,10 @@ class Invoice
     }
 
 
+    public function __clone()
+    {
+        $this->id = uniqid('invoice_');
+    }
 
     public function __get($name)
     {
