@@ -82,7 +82,12 @@ require __DIR__ . '/../../vendor/autoload.php';
 // echo 'invoice1 === invoice2';
 // var_dump($invoice1 === $invoice2);
 
-$invoice1 = new Invoice(25, 'My Invoice 1');
-$invoice3 = clone $invoice1;
+// $invoice1 = new Invoice(25, 'My Invoice 1');
+// $invoice3 = clone $invoice1;
 
-var_dump($invoice3);
+// var_dump($invoice3);
+
+$a = [1, 2, 3, 4, 5, 6];
+$b = serialize($a);
+
+echo unserialize($b);
