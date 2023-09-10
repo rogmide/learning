@@ -87,7 +87,27 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 // var_dump($invoice3);
 
-$a = [1, 2, 3, 4, 5, 6];
-$b = serialize($a);
 
-echo unserialize($b);
+// Some serialize we will see in the future if we need to use that
+// $a = [1, 2, 3, 4, 5, 6];
+// $b = serialize($a);
+// echo unserialize($b);
+
+
+// $invoice = new Invoice(0, 'Money 1');
+
+
+// try {
+//     //code...
+//     var_dump($invoice->process());
+// } catch (\Exception $e) {
+//     //throw $th;
+//     echo 'Message: ' . $e->getMessage() . ' File: ' . $e->getFile() . ' Line: ' . $e->getLine();
+// }
+
+// $dateTime = new DateTime();
+
+// var_dump($dateTime);
+
+// create the class invoice collection
+$invoiceCollection = new InvoiceCollection(new Invoice(10, 'Invoice-'));

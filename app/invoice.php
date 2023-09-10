@@ -49,9 +49,18 @@ class Invoice
         unset($this->data[$name]);
     }
 
-    protected function process($amount, $description)
+    public function process()
     {
-        var_dump($amount, $description);
+
+        if ($this->amount <= 0) {
+            throw new \InvalidArgumentException('Invalid invoice amount!');
+        }
+        echo 'Processing $' . $this->amount . ' invoice - ';
+
+        sleep(1);
+
+        echo 'OK' . PHP_EOL;
+        // var_dump($amount, $description);
     }
 
     public function __call($name, $arguments)
