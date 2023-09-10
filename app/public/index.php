@@ -1,5 +1,7 @@
 <?php
 
+use App\CoffeMakers\LatteMaker;
+
 require __DIR__ . '/../../vendor/autoload.php';
 
 // If the property not exist the getter and setter will be call
@@ -25,23 +27,33 @@ require __DIR__ . '/../../vendor/autoload.php';
 // echo '<br />';
 // var_dump($classA->make());
 
-$coffeeMaker = new \App\CoffeMakers\CoffeeMaker();
-$coffeeMaker->makeCoffee();
+// $coffeeMaker = new \App\CoffeMakers\CoffeeMaker();
+// $coffeeMaker->makeCoffee();
 
-echo '<br />';
+// echo '<br />';
 
-$latteMaker = new \App\CoffeMakers\LatteMaker;
-$latteMaker->makeLatte();
+// $latteMaker = new \App\CoffeMakers\LatteMaker;
+// $latteMaker->makeLatte();
 
-echo '<br />';
+// echo '<br />';
 
-$capuccinoMaker = new \App\CoffeMakers\cappuccinoMaker();
-$capuccinoMaker->makeCappuccino();
+// $capuccinoMaker = new \App\CoffeMakers\cappuccinoMaker();
+// $capuccinoMaker->makeCappuccino();
 
 
-echo '<br />';
+// echo '<br />';
 
-$allinonecoffeemaker = new \App\CoffeMakers\AllInOneCoffeeMaker();
-$allinonecoffeemaker->makeCoffee();
-$allinonecoffeemaker->makeLatte();
-$allinonecoffeemaker->makeCappuccino();
+// $allinonecoffeemaker = new \App\CoffeMakers\AllInOneCoffeeMaker();
+// $allinonecoffeemaker->makeCoffee();
+// $allinonecoffeemaker->makeLatte();
+// $allinonecoffeemaker->makeCappuccino();
+
+// echo '<br />';
+
+
+// $latteMaker->Foo();
+
+\App\CoffeMakers\LatteMaker::$foo = 'foo';
+\App\CoffeMakers\AllInOneCoffeeMaker::$foo = 'bar';
+
+echo \App\CoffeMakers\LatteMaker::$foo . ' ' . \App\CoffeMakers\AllInOneCoffeeMaker::$foo;
