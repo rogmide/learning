@@ -10,6 +10,15 @@ class Invoice
     protected string $accountNumber = '1234567890';
 
     public float $amount;
+    public string $description;
+
+    public function __construct($amount, $description)
+    {
+        $this->amount = $amount;
+        $this->description = $description;
+    }
+
+
 
     public function __get($name)
     {

@@ -2,6 +2,7 @@
 
 use App\ClassA;
 use App\CoffeMakers\LatteMaker;
+use App\Invoice;
 
 require __DIR__ . '/../../vendor/autoload.php';
 
@@ -69,6 +70,15 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 // var_dump($obj);
 
-$obj = new ClassA(1, 2);
+// $obj = new ClassA(1, 2);
 
-var_dump($obj->bar());
+// var_dump($obj->bar());
+
+$invoice1 = new Invoice(25, 'My Invoice 1');
+$invoice2 = new Invoice(100, 'My Invoice 2');
+
+echo 'invoice1 == invoice2';
+var_dump($invoice1 == $invoice2);
+
+echo 'invoice1 === invoice2';
+var_dump($invoice1 === $invoice2);
