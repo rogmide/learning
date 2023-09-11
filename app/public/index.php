@@ -3,6 +3,7 @@
 use App\ClassA;
 use App\CoffeMakers\LatteMaker;
 use App\Invoice;
+use App\InvoiceCollection;
 
 require __DIR__ . '/../../vendor/autoload.php';
 
@@ -110,4 +111,9 @@ require __DIR__ . '/../../vendor/autoload.php';
 // var_dump($dateTime);
 
 // create the class invoice collection
-$invoiceCollection = new InvoiceCollection(new Invoice(10, 'Invoice-'));
+// $invoiceCollection = new InvoiceCollection([new Invoice(10, 'Invoice-'), new Invoice(15, 'Invoice-'), new Invoice(20, 'Invoice-')]);
+
+// foreach ($invoiceCollection as $invoice) {
+//     # code...
+//     echo $invoice->id . ' - ' . $invoice->amount . PHP_EOL;
+// }
