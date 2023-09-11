@@ -117,3 +117,16 @@ require __DIR__ . '/../../vendor/autoload.php';
 //     # code...
 //     echo $invoice->id . ' - ' . $invoice->amount . PHP_EOL;
 // }
+
+
+$router = new \App\Routes\Router();
+
+$router->register('/', function () {
+    echo 'Home';
+});
+
+$router->register('/invoices', function () {
+    echo 'Invoices';
+});
+
+echo $router->resolve($_SERVER['REQUEST_URI']);
